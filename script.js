@@ -45,7 +45,8 @@ const typeController = (e) => {
   if (newLetterCorrect) {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
-    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -54,7 +55,7 @@ const typeController = (e) => {
   }
 };
 
-const validate = (key) => {
+const validate = (key)=> {
   if (key === questionText[userText.length - 1]) {
     return true;
   }
@@ -81,7 +82,7 @@ const gameOver = () => {
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
-    <p>You made <span class="bold red">${errorCount++}</span> mistakes</p>
+    <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <button onclick="closeModal()">Close</button>
   `;
 
@@ -89,7 +90,7 @@ const gameOver = () => {
 
   // restart everything
   startTime = null;
-  errorCount = 0 ;
+  errorCount = 0;
   userText = "";
   display.classList.add("inactive");
 };
@@ -120,7 +121,7 @@ const start = () => {
       startTime = new Date().getTime();
     }
     count--;
-  }, 1000 );
+  }, 1000);
 };
 
 // START Countdown
