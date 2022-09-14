@@ -20,6 +20,7 @@ function addHistory(questionText, timeTaken, errorCount) {
 
   displayHistory();
 }
+addHistory();
 
 function displayHistory() {
   histories.innerHTML = "";
