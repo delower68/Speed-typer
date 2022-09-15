@@ -8,7 +8,7 @@ body {
   background-image: url("./bg.png");
   background-size: cover;
   background-position: left top;
-  font-family: "Zil Slab", serif;
+  font-family:  serif;
 }
 
 .box-container {
@@ -95,7 +95,6 @@ body {
 }
 .hidden {
   display: none;
-
 }
 .title {
   text-align: center;
@@ -143,9 +142,9 @@ button {
 }
 
 #histories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
 }
 
 .card {
@@ -153,6 +152,7 @@ button {
   height: 100%;
   padding: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
@@ -181,6 +181,11 @@ button {
   position: fixed;
   top: 0;
 }
+/* / blog-button / */
+.buttons button a{
+  text-decoration: none;
+  color: white; 
+}
 
 @media only screen and (max-width: 700px) {
   .box-container {
@@ -188,9 +193,10 @@ button {
     width: 100%;
   }
   .card {
+    /*  flex-direction: column;  */
     display: block;
   }
-  #result {
+  #result{
     position: fixed;
     top: 30%; 
     left: 50%;
@@ -203,5 +209,10 @@ button {
     color: white;
     text-align: center;
     padding: 2rem;
+  }
+  #histories {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 18px;
   }
 }

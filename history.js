@@ -18,9 +18,9 @@ function addHistory(questionText, timeTaken, errorCount) {
   previousTests.push({ questionText, timeTaken, errorCount });
   localStorage.setItem("testHistory", JSON.stringify(previousTests));
 
-  displayHistory();
 }
-addHistory();
+displayHistory();
+// addHistory();
 
 function displayHistory() {
   histories.innerHTML = "";
