@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>My Blog</title>
+</head>
+<body>
+    <header class="container mt-5 text-center p-3">
+        <h1 class="text-info bg-dark fw-bold p-3">Blog</h1>
+    </header>
+    <main>
+        <section class="container  my-5  ">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    What is the different of Local Storage and session storage?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">The storage capacity of local storage is 5MB/10MB.
+                        The storage capacity of session storage is 5MB.
+                        As it is not session-based, it must be deleted via javascript or manually	It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed. 
+                        The client  can only read local storage	The client can only read local storage.
+                        There is no transfer of data to the server	There is no transfer of data to the server.
+                        There are fewer old browsers that support it	There are fewer old browsers that support it</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    Global scope VS Block scope
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Global scope: Variables declared Globally (outside any function) have Global Scope.
+
+                        Global variables can be accessed from anywhere in a JavaScript program.
+                        
+                        Variables declared with var, let and const are quite similar when declared outside a block.
+                        
+                        They all have Global Scope:
+                        
+                        var x = 2;       // Global scope
+                        let x = 2;       // Global scope
+                        const x = 2;       // Global scope
+                        
+                        Block scope
+                        What happens if we rewrite our first example above to use let or const instead of var? Well, let's take a look. Be warned — we are going to see some tricky behavior.
+
+                        function doYouLikeApples(bool) {
+                        if (bool) {
+                            let str = "Apples are delicious!";
+                        } else {
+                            str = "Maybe oranges would be better.";
+                        }
+                        return str;
+                        }
+                        All we are doing is changing var to let from the first example in this lesson.
+                        
+                        So what happens if we call doYouLikeApples(true)?
+                        
+                        We'll get the following error:
+                        
+                        Uncaught ReferenceError: str is not defined</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    How to work event loop?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack, which effectively runs it. Such an iteration is called a tick in the Event Loop.</div>
+                </div>
+                </div>
+                <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    How does we get undifined?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">We learned that a numerical expression is undefined when there is no answer or when you get division by zero. We might get division by zero for those numerical expressions with variables and a denominator. To find the points where the numerical expression is undefined, we set the denominator equal to zero and solve.</div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

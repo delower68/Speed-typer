@@ -20,6 +20,8 @@ function addHistory(questionText, timeTaken, errorCount) {
 
 }
 displayHistory();
+
+// addHistory() function commented bcz of no need to reload page and save history 
 // addHistory();
 
 function displayHistory() {
